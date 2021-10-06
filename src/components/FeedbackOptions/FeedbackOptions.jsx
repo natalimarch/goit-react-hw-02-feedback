@@ -9,7 +9,7 @@ const FeedbackOptions = ({ onLeaveFeedback, options }) => {
         type="button"
         name={name}
         className={styles.FeedbackBtn}
-        onClick={countFeedback}
+        onClick={(e) => countFeedback(e, name)}
       >
         {name}
       </button>

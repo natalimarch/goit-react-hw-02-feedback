@@ -11,7 +11,7 @@ class Feedback extends Component {
     bad: 0,
   };
 
-  countFeedback = (e) => {
+  countFeedback = (e, name) => {
     e.preventDefault();
     console.log(e.currentTarget.name);
     const currentState = e.currentTarget.name;
@@ -43,7 +43,7 @@ class Feedback extends Component {
     } = this;
     const { good, neutral, bad } = this.state;
     const onLeaveFeedback = { countFeedback };
-    const names = ["good", "neutral", "bad"];
+    const names = Object.keys(this.state);
     return (
       <div className={styles.FeedbackForm}>
         <Section title="Please leave feedback" />
