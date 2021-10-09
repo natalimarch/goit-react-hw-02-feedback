@@ -11,10 +11,10 @@ class Feedback extends Component {
     bad: 0,
   };
 
-  countFeedback = (e, name) => {
-    e.preventDefault();
-    console.log(e.currentTarget.name);
-    const currentState = e.currentTarget.name;
+  countFeedback = (name) => {
+    // e.preventDefault();
+    // console.log(e.currentTarget.name);
+    const currentState = name;
     this.setState((prevState) => ({
       [currentState]: prevState[currentState] + 1,
     }));
